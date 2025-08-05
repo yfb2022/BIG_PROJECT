@@ -1,11 +1,10 @@
 import streamlit as st
 from utils.styles import inject_global_css
 from PIL import Image
+import os
 
 st.set_page_config(page_title="DBTI 대시보드", page_icon="🐶")
 inject_global_css()
-logo_image = Image.open('../assets/logo.png')
-st.sidebar.image(logo_image, width=200)
 
 st.title("🐶 반려동물 성향 분석 플랫폼 🐶")
 
@@ -21,5 +20,5 @@ st.markdown("""
 > 데이터 기반 성향 분석으로 더 나은 반려생활을 함께 만들어가요! 🐕🐈
 """)
 
-logo_image = Image.open('../assets/logo.png')
-st.image(logo_image, width=200)
+logo_path = os.path.join(os.path.dirname(__file__), 'assets', 'logo.png')
+st.sidebar.image(logo_path, width=200)
