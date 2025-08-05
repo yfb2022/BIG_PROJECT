@@ -21,4 +21,5 @@ st.markdown("""
 """)
 
 logo_path = os.path.join(os.path.dirname(__file__), 'assets', 'logo.png')
-st.sidebar.image(logo_path, width=200)
+logo_image = Image.open(logo_path)
+st.sidebar.image(logo_image, width=200)
