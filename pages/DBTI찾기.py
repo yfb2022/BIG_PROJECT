@@ -14,7 +14,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 페이지 설정
 inject_global_css()
-logo_path = os.path.join(os.path.dirname(__file__), 'assets', 'logo.png')
+logo_path = os.path.join(os.path.dirname(__file__), '..', 'assets', 'logo.png')
 logo_image = Image.open(logo_path)
 st.sidebar.image(logo_image, width=200)
 
